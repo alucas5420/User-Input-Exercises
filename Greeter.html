@@ -1,0 +1,36 @@
+<!-- Adam Lucas -->
+<!-- 10/27/2022 -->
+
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+
+<!-- Title of the site -->
+
+<title>Greeting</title>
+<script>
+
+function typeName(frm)
+{
+
+<!-- Sets it so that it will say hello whenever someone enters a value -->
+
+var str='Hello ';
+str+=frm.name.value.trim();
+document.getElementById("writeName").innerHTML=str;
+alert(str);
+}
+
+</script>
+</head>
+<body>
+
+<!-- Sets up a form and a button -->
+
+<form onsubmit='return typeName(this)'>
+<input type='text' id='name'><br>
+<center><span id='writeName' value=""></span></center>
+<button type='submit' id='button'> Submit</button>
+</form>
+</body>
+</html>

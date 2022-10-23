@@ -1,0 +1,71 @@
+<!-- Adam Lucas -->
+<!-- 10/27/2022 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<!-- Name of the site -->
+
+<title>Number Guessing Game</title>
+<style>
+
+<!-- Setting up the body of the site -->
+
+body {
+width: 50%;
+max-width: 800px;
+min-width: 480px;
+
+}
+</style>
+</head>
+
+<!-- Informative text -->
+
+<body>
+<h1>Guess The Number</h1>
+
+<p>Enter number between 1 - 20 </p>
+
+<!-- Place to enter the guessed number -->
+
+<div class="form">
+<label>Enter a guess Number: </label>
+<input type = "text" id = "txt" class = "txt">
+<input type = "submit" value = "Submit" id = "submitguess">
+</div>
+<script type = "text/javascript">
+//The random number from 1 to 20 is generated
+var y = Math.floor(Math.random() * 20 + 1); 
+
+document.getElementById("submitguess").onclick = function(){
+var x = document.getElementById("txt").value;
+if(x == y)
+{
+
+// The guessed number is equal
+
+alert("Guessed number and random number are equal");
+}
+else if(x > y) 
+{
+
+// The guessed number is too high 
+
+alert("Guessed Number is too high");
+document.getElementById("txt").value="";
+}
+else
+{
+
+// The guessed number is too low
+
+alert("Guessed Number is too low");
+document.getElementById("txt").value="";
+}
+}
+</script>
+</body>
+</html>
